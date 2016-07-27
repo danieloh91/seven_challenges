@@ -12,6 +12,7 @@ $(document).ready(function(){
    * using the item in response data?
   */
 
-  // var item = ...
+  var item = response.data[0].message;
+  $('#target').append("<p>" + item + "</p>");
 
-})
+});
