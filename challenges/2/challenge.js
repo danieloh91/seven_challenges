@@ -14,12 +14,19 @@ $(document).ready(function(){
    * in index.html, using a loop?
   */
   var items = response.data;
-  function render(items) {
-    $.each(items, function (i, l){
-      $('#target').append("<p>" + l.message + "</p>");
-    });
-  }
 
+  //jquery solution
+  // function render(items) {
+  //   $.each(items, function (i, l){
+  //     $('#target').append("<p>" + l.message + "</p>");
+  //   });
+  // }
+  //
   render(items);
+
+  //javascript solution
+  items.forEach(function(item){
+    $('#target').append("<p>" + item.message + "</p>");
+  });
 
 });
