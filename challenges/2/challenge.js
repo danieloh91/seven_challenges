@@ -13,14 +13,13 @@ $(document).ready(function(){
    * response data to the target container
    * in index.html, using a loop?
   */
-
+  var items = response.data;
   function render(items) {
-    // LOOP
-      // var item = ...
-      // $("div#target").append("<p>" + item.message + "</p>")
-    //
+    $.each(items, function (i, l){
+      $('#target').append("<p>" + l.message + "</p>");
+    });
   }
 
-  render(response.data);
+  render(items);
 
-})
+});
